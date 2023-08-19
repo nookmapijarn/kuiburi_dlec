@@ -41,7 +41,7 @@ class DashboardController extends Controller
         //echo "<h1>".$sum."</h1>";
 
         $semestrylist1 = DB::table('grade')
-        ->where('STD_CODE', '1215040001'.$id)
+        ->where('STD_CODE', '1277020000'.$id)
         ->select('SEMESTRY')
         ->distinct() //ข้อมูลไม่ซ้ำ
         ->orderBy('SEMESTRY', 'ASC')
@@ -120,14 +120,14 @@ class DashboardController extends Controller
 
     public function get_student($id){
         $student = DB::table('student')
-        ->where('STD_CODE', '1215040001'.$id)
+        ->where('STD_CODE', '1277020000'.$id)
         ->get();
         return $student;
     }
 
     public function get_activity($id){
         $activity = DB::table('activity')
-        ->where('STD_CODE', '1215040001'.$id)
+        ->where('STD_CODE', '1277020000'.$id)
         ->get();
         //print_r($activity[1]);     
         return $activity;
@@ -142,7 +142,7 @@ class DashboardController extends Controller
     public function timelerning(){
         // ระยะเวลาเรียน
         $semtime = DB::table('grade')
-        ->where('STD_CODE', '1215040001'.$this->getStudentidByUser())
+        ->where('STD_CODE', '1277020000'.$this->getStudentidByUser())
         ->select('SEMESTRY')
         ->distinct() //ข้อมูลไม่ซ้ำ
         ->orderBy('SEMESTRY', 'ASC')
@@ -171,7 +171,7 @@ class DashboardController extends Controller
     // ค่าเฉลี่ยการเข้าสอบ
     public function exam_avg(){
         $gradelist = DB::table('grade')
-                    ->where('STD_CODE', '1215040001'.$this->getStudentidByUser())
+                    ->where('STD_CODE', '1277020000'.$this->getStudentidByUser())
                     ->where('GRADE', '!=', '')
                     ->get();
         $exam = 0; // จำนวนเข้า
@@ -187,24 +187,24 @@ class DashboardController extends Controller
         //print $exam_all;
         $exam_avg = round(($exam/$exam_all)*100, 2);
         }
-        return round($exam_avg, 0);
+        return round($exam_avg, 0);  
     }
 
     public function get_gradelist(){
         // ตาราง garde
         $gradelist = DB::table('grade')
-        ->where('STD_CODE', '1215040001'.$this->getStudentidByUser())
+        ->where('STD_CODE', '1277020000'.$this->getStudentidByUser())
         ->get();
         return $gradelist;
     }
 
     public function get_grade_analyze(){
         $id = $this->getStudentidByUser();
-        $learning   = DB::table('grade')->where('STD_CODE', '1215040001'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^ทร')->get();
-        $besic      = DB::table('grade')->where('STD_CODE', '1215040001'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^พ')->get();
-        $career     = DB::table('grade')->where('STD_CODE', '1215040001'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^อ')->get();
-        $life       = DB::table('grade')->where('STD_CODE', '1215040001'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^ทช')->get();
-        $society    = DB::table('grade')->where('STD_CODE', '1215040001'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^ส')->get();
+        $learning   = DB::table('grade')->where('STD_CODE', '1277020000'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^ทร')->get();
+        $besic      = DB::table('grade')->where('STD_CODE', '1277020000'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^พ')->get();
+        $career     = DB::table('grade')->where('STD_CODE', '1277020000'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^อ')->get();
+        $life       = DB::table('grade')->where('STD_CODE', '1277020000'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^ทช')->get();
+        $society    = DB::table('grade')->where('STD_CODE', '1277020000'.$id)->where('GRADE', '!=', 'ข')->where('GRADE', '!=', '')->where('SUB_CODE', 'regexp', '^ส')->get();
         
         $learning   = ($learning->Count()!=0) ? $learning->sum('TOTAL')/$learning->Count() : 0;
         $besic      = ($besic->Count()!=0) ? $besic->sum('TOTAL')/$besic->Count() : 0;
@@ -224,7 +224,7 @@ class DashboardController extends Controller
 
         foreach ($gradelist as $g) {
             // เอาเฉพาะที่มีเกรด ตรวจค่าตัวเลข และไม่เท่ากับ 0
-            if(is_numeric($g->GRADE) && $g->GRADE != 0){   
+            if(is_numeric($g->GRADE) && $g->GRADE != 0 &&  $g->GRADE != ''){   
                 // +หน่วยกิต         
                 $credit += $this->getSubject($g->SUB_CODE)->SUB_CREDIT;
             }

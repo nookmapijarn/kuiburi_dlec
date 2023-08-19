@@ -72,7 +72,7 @@ class ExamscheduleController extends Controller
 
     public function get_student($id){
         $student = DB::table('student')
-        ->where('STD_CODE', '1215040001'.$id)
+        ->where('STD_CODE', '1277020000'.$id)
         ->get();
         return $student;
     }
@@ -80,7 +80,7 @@ class ExamscheduleController extends Controller
     public function get_gradelist($id, $sumestry){
         // ตาราง garde
         $gradelist = DB::table('grade')
-        ->where('STD_CODE', '1215040001'.$id)
+        ->where('STD_CODE', '1277020000'.$id)
         ->where('SEMESTRY', $sumestry)
         ->get();
         return $gradelist;

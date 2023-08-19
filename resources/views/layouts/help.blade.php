@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="ช่วยเหลือผู้เรียน สกร.อำเภอโพธิ์ทอง">
-        <meta name="robots" content="ช่วยเหลือผู้เรียน สกร.อำเภอโพธิ์ทอง">
-        <title>{{ config('app.name', 'ช่วยเหลือผู้เรียน-สกร.อำเภอโพธิ์ทอง') }}</title>
+        <meta name="description" content="ช่วยเหลือผู้เรียน สกร.อำเภอกุยบุรี">
+        <meta name="robots" content="ช่วยเหลือผู้เรียน สกร.อำเภอกุยบุรี">
+        <title>{{ config('app.name', 'ช่วยเหลือผู้เรียน-สกร.อำเภอกุยบุรี') }}</title>
         <link rel="icon" type="image/x-icon" href="{{asset('storage/logo.png');}}">
 
         <!-- Fonts -->

@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="2pi9TzWSjw9fEzla9XMTbb3-lTnVb26X8BK6X8sbx0A"/>
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="ทะเบียนนักศึกษา - สกร.อำเภอโพธิ์ทอง, การเรียนการสอน, ตารางสอบ สกร.อำเภอโพธิ์ทอง, นักศึกษา สกร.อำเภอโพธิ์ทอง, ผลการเรียน สกร.อำเภอโพธิ์ทอง">
-        <meta name="robots" content="ทะเบียนนักศึกษา - สกร.อำเภอโพธิ์ทอง, การเรียนการสอน, ตารางสอบ สกร.อำเภอโพธิ์ทอง, นักศึกษา สกร.อำเภอโพธิ์ทอง, ผลการเรียน สกร.อำเภอโพธิ์ทอง">
-        <title>{{ config('app.name', 'งานการศึกษาพื้นฐาน-สกร.อำเภอโพธิ์ทอง') }}</title>
+        <meta name="description" content="ทะเบียนนักศึกษา - สกร.อำเภอกุยบุรี, การเรียนการสอน, ตารางสอบ สกร.อำเภอกุยบุรี, นักศึกษา สกร.อำเภอกุยบุรี, ผลการเรียน สกร.อำเภอกุยบุรี">
+        <meta name="robots" content="ทะเบียนนักศึกษา - สกร.อำเภอกุยบุรี, การเรียนการสอน, ตารางสอบ สกร.อำเภอกุยบุรี, นักศึกษา สกร.อำเภอกุยบุรี, ผลการเรียน สกร.อำเภอกุยบุรี">
+        <title>{{ config('app.name', 'งานการศึกษาพื้นฐาน-สกร.อำเภอกุยบุรี') }}</title>
         <link rel="icon" type="image/x-icon" href="{{asset('storage/logo.png');}}">
 
         <!-- Fonts -->
@@ -80,8 +80,8 @@
                 <div class="flex justify-center mb-3 md:m-5">
                     <img src="{{asset('storage/logo.png');}}" width="120px" class="drop-shadow-2xl">
                 </div>
-                <h1 class="md:mb-4 text-xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl tracking-wider leading-relaxed drop-shadow-2xl">ศูนย์ส่งเสริมการเรียนรู้อำเภอโพธิ์ทอง</h1>
-                <p class="mb-8 text-sm font-normal text-gray-300 md:text-xl sm:px-16 lg:px-48 drop-shadow-2xl">Phothong District Learning Encouragement Center</p>
+                <h1 class="md:mb-4 text-xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl tracking-wider leading-relaxed drop-shadow-2xl">ศูนย์ส่งเสริมการเรียนรู้อำเภอกุยบุรี</h1>
+                <p class="mb-8 text-sm font-normal text-gray-300 md:text-xl sm:px-16 lg:px-48 drop-shadow-2xl">Kuiburi District Learning Encouragement Center</p>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                     <a href="{{ route('login') }}" class="w-full sm:w-auto bg-yellow-300 text-gray-800 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5  ">
                         <svg class="mr-3 w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

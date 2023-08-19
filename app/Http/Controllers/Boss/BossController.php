@@ -17,7 +17,7 @@ class BossController extends Controller
     public function index(Request $request)
     {
         $id = auth()->user()->student_id;
-        if ($id != '1215040000') {
+        if ($id != '1277020001') {
             return redirect('welcome/?roletype='.$id);
         }
 
@@ -208,7 +208,7 @@ class BossController extends Controller
         ->where('SEMESTRY', $semestry)
         ->select('STD_CODE')
         ->groupBy('STD_CODE')
-        //->where('STD_CODE', 'regexp', '1215040001'.$ID.'[0-9]+')
+        //->where('STD_CODE', 'regexp', '1277020000'.$ID.'[0-9]+')
         //->where('ID', '>', $ID)
         ->get();
         return $s;

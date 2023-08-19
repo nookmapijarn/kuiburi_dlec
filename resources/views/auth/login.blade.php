@@ -1,9 +1,9 @@
 <x-guest-layout>
 
     {{-- Label --}}
-    <div class="text-center m-2 rounded-lg text-lg text-shadow">ระบบงานทะเบียน-งานการศึกษาขั้นพื้นฐาน</div>
-    <div class="text-center m-2 rounded-lg text-lg text-shadow">ศูนย์ส่งเสริมการเรียนรู้อำเภอโพธิ์ทอง</div>
-    <div class="text-center p-1 m-1 text-2xl text-gray-900 ">Phothong DLEC</div>
+    <div class="text-center m-2 rounded-lg text-lg text-shadow">ศูนย์ส่งเสริมการเรียนรู้อำเภอกุยบุรี</div>
+    <div class="text-center p-1 m-1 text-2xl text-gray-900 ">KUIBURI DLEC</div>
+    
  
 
 
@@ -79,8 +79,12 @@
                     {{ __('หน้าหลัก') }}
                 </div>   
             </a>   
+            {{-- @if (Route::has('password.request')) --}}
+                <a class="flex items-center justify-end mt-4 m-2 hover:text-sky-700" href="{{ route('password.request') }}">
+                    {{ __('ลืมรหัสผ่าน?') }}
+                </a>
+            {{-- @endif --}}
         </div>
-        
 
     </form>
 </x-guest-layout>

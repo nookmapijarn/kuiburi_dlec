@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class TeachersController extends Controller
 {
-    protected $semestry = '66/1';
+    protected $semestry = '66/1';  
     /**
      * Display a listing of the resource.
      *
@@ -24,9 +24,11 @@ class TeachersController extends Controller
         $tumbon = '';
         $studreport = '';
         $semestry = $this->semestry;
+        $this->setSemestry();
         $id = auth()->user()->student_id;
+        $group = DB::table('group')->select('GRP_CODE', 'GRP_NAME')->orderBy('GRP_CODE', 'ASC')->get();
 
-        if ($id != '1215040001') {
+        if ($id != '1277020001') {
             return redirect('welcome/?roletype='.$id);
         }
 
@@ -34,7 +36,7 @@ class TeachersController extends Controller
             $tumbon = str_split($request->tumbon, 4)[0];
             $studreport = $request->studreport;
         }else{
-            return view('teachers.tdashboard' ,compact('data', 'semestry'));
+            return view('teachers.tdashboard' ,compact('data', 'semestry', 'group'));
         }
 
         // เลือกรายงาน
@@ -42,22 +44,30 @@ class TeachersController extends Controller
             case 'นักศึกษาทั้งหมด':
                 $data = $this->allstudent($tumbon);
                 $data = collect($data)->sortBy('lavel')->toArray(); // $mystudent = collect($mystudent)->sortBy('lavel')->reverse()->toArray(); DESC
-                return view('teachers.tdashboard' ,compact('data', 'semestry'));
+                return view('teachers.tdashboard' ,compact('data', 'semestry', 'group'));
               break;
             case 'เฉพาะผู้คาดว่าจะจบ':
                 $data = $this->expstudent($tumbon, $studreport);
                 $data = collect($data)->sortBy('lavel')->toArray();
-                return view('teachers.tdashboard' ,compact('data', 'semestry'));
+                return view('teachers.tdashboard' ,compact('data', 'semestry', 'group'));
               break;
             case 'ไม่จบตกค้าง(ที่ไม่ได้ลงทะเบียนแล้ว)':
                 $data = $this->unfinishstudent($tumbon, $studreport);
                 $data = collect($data)->sortBy('lavel')->toArray();
-                return view('teachers.tdashboard' ,compact('data', 'semestry'));
+                return view('teachers.tdashboard' ,compact('data', 'semestry', 'group'));
               break;
             default:
-              return view('teachers.tdashboard' ,compact('data', 'semestry'));
+              return view('teachers.tdashboard' ,compact('data', 'semestry', 'group'));
           }                       
         //return view('teachers.tdashboard' ,compact('data'));
+    }
+
+    public function setSemestry(){
+        $last = DB::table('grade')->select('SEMESTRY')->orderBy('SEMESTRY', 'DESC')->first();
+        foreach($last as $l){
+            $this->semestry = $last->SEMESTRY;
+            echo $this->semestry;
+        }
     }
 
     public function allstudent($grp_code){

@@ -3,7 +3,7 @@
     <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div class="max-w-2xl">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">ผู้บริหาร</h2>
-        {{-- <p class="mt-6 text-lg leading-8 text-gray-600">ศูนย์ส่งเสริมการเรียนรู้อำเภอโพธิ์ทองมีบุคคลากรทั้งหมด  26 รายดังนี้.</p> --}}
+        {{-- <p class="mt-6 text-lg leading-8 text-gray-600">ศูนย์ส่งเสริมการเรียนรู้อำเภอกุยบุรีมีบุคคลากรทั้งหมด  26 รายดังนี้.</p> --}}
         </div>
         <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
         <li>
@@ -11,7 +11,7 @@
             <img class="h-16 w-16 rounded-full" src="{{asset('storage/avatar/1.jpg');}}" alt="">
             <div>
                 <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">นางสาวกุหลาบ  อ่อนระทวย</h3>
-                <p class="text-sm font-semibold leading-6 text-indigo-600">ผอ.สกร.อำเภอโพธิ์ทอง</p>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">ผอ.สกร.อำเภอกุยบุรี</p>
                 <p class="text-sm font-semibold leading-6 text-indigo-600">062-4340888</p>
             </div>
             </div>
@@ -23,7 +23,7 @@
         <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
             <div class="max-w-2xl">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">ข้าราชการ 4 คน</h2>
-            {{-- <p class="mt-6 text-lg leading-8 text-gray-600">สกร.อำเภอโพธิ์ทอง มีข้าราชการทั้งหมด 4 ท่านดังนี้.</p> --}}
+            {{-- <p class="mt-6 text-lg leading-8 text-gray-600">สกร.อำเภอกุยบุรี มีข้าราชการทั้งหมด 4 ท่านดังนี้.</p> --}}
             </div>
             <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
             <li>

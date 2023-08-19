@@ -12,6 +12,18 @@
             <div class="font-medium dark:text-white">
                 <div> รหัสนักศึกษา: {{ auth()->user()->student_id }} </div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">ชื่อ-สกุล {{$student[0]->NAME}} {{$student[0]->SURNAME}}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400"> สถาณะปัจจุบัน : 
+                    @if($student[0]->FIN_CAUSE==1) <span class="text-green-400">จบหลักสูตร</span> @endif 
+                    @if($student[0]->FIN_CAUSE==2) ลาออก @endif 
+                    @if($student[0]->FIN_CAUSE==3) <span class="text-red-400">หมดสภาพ</span> @endif 
+                    @if($student[0]->FIN_CAUSE==4) พ้นสภาพ @endif 
+                    @if($student[0]->FIN_CAUSE==5) ศึกษาต่อที่อื่น @endif 
+                    @if($student[0]->FIN_CAUSE==6) ศึกษาเพิ่งหลังจบ @endif 
+                    @if($student[0]->FIN_CAUSE==7) จบตกหล่น @endif 
+                    @if($student[0]->FIN_CAUSE==8) อื่นๆ @endif 
+                    @if($student[0]->FIN_CAUSE==9) จบอยู่ระหว่างตรวจสอบวุฒิ @endif 
+                    @if($student[0]->FIN_CAUSE=='') <span class="text-yellow-400"> กำลังศึกษา...</span> @endif
+                </div>
             </div>
         </div>
     </section>

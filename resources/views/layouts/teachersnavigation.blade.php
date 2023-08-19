@@ -8,7 +8,7 @@
                     <a href="{{ url('welcome') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />                        
                     </a>
-                    <strong class="ml-2 text-gray-100 text-lg tracking-wide"> ครู สกร.อำเภอโพธิ์ทอง </strong>
+                    <strong class="ml-2 text-gray-100 text-lg tracking-wide"> ครู สกร.อำเภอกุยบุรี </strong>
                 </div>
 
                 <!-- Navigation Links -->

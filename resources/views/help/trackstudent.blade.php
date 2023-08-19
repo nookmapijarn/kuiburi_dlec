@@ -5,7 +5,7 @@
             <div class="text-center text-xl p-5  bg-yellow-200 mb-2 shadow-md">
                 แบบติดตามผู้สำเร็จการศึกษา
                 <div class="text-center text-xs">หลักสูตรการศึกษานอกระบบระดับการศึกษาขั้นพื้นฐาน พุทธศักราช 2551</div>
-                <div class="text-center text-xs">ศูนย์ส่งเสริมการเรียนรู้อำเภอโพธิ์ทอง</div>
+                <div class="text-center text-xs">ศูนย์ส่งเสริมการเรียนรู้อำเภอกุยบุรี</div>
             </div>
             {{-- Part 1 --}}
             <div class="grid gap-6 mb-6 md:grid-cols-1 p-4 shadow-md">
@@ -88,7 +88,7 @@
                     <label for="GRP_CODE" required class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">กศน.ตำบล</label>
                     <select id="GRP_CODE" name="GRP_CODE" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  ">
                         <option selected>เลือก</option>
-                        <option value="400">อำเภอโพธิ์ทอง</option>
+                        <option value="400">อำเภอกุยบุรี</option>
                         <option value="4011">4011 บางพลับ</option>
                         <option value="4012">4012 บางพลับ</option>
                         <option value="4021">4021 อ่างแก้ว</option>

@@ -5,9 +5,9 @@
         <meta name="google-site-verification" content="2pi9TzWSjw9fEzla9XMTbb3-lTnVb26X8BK6X8sbx0A" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="ทะเบียนนักศึกษา - สกร.อำเภอโพธิ์ทอง, การเรียนการสอน, ตารางสอบ สกร.อำเภอโพธิ์ทอง, นักศึกษา สกร.อำเภอโพธิ์ทอง, ผลการเรียน สกร.อำเภอโพธิ์ทอง">
-        <meta name="robots" content="ทะเบียนนักศึกษา - สกร.อำเภอโพธิ์ทอง, การเรียนการสอน, ตารางสอบ สกร.อำเภอโพธิ์ทอง, นักศึกษา สกร.อำเภอโพธิ์ทอง, ผลการเรียน สกร.อำเภอโพธิ์ทอง">
-        <title>{{ config('app.name', 'งานการศึกษาพื้นฐาน-สกร.อำเภอโพธิ์ทอง') }}</title>
+        <meta name="description" content="ทะเบียนนักศึกษา - สกร.อำเภอกุยบุรี, การเรียนการสอน, ตารางสอบ สกร.อำเภอกุยบุรี, นักศึกษา สกร.อำเภอกุยบุรี, ผลการเรียน สกร.อำเภอกุยบุรี">
+        <meta name="robots" content="ทะเบียนนักศึกษา - สกร.อำเภอกุยบุรี, การเรียนการสอน, ตารางสอบ สกร.อำเภอกุยบุรี, นักศึกษา สกร.อำเภอกุยบุรี, ผลการเรียน สกร.อำเภอกุยบุรี">
+        <title>{{ config('app.name', 'งานการศึกษาพื้นฐาน-สกร.อำเภอกุยบุรี') }}</title>
         <link rel="icon" type="image/x-icon" href="{{asset('storage/logo.png');}}">
 
         <!-- Fonts -->

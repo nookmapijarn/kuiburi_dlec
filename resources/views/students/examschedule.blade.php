@@ -2,7 +2,7 @@
   <h4 class="font-semibold text-lg text-gray-100 dark:text-gray-200 leading-tight  text-center py-5 bg-orange-600">
     {{ __('ตารางสอบปลายภาค - ภาคเรียน 1/2566') }}
 </h4>      
-    <div class=" text-center pt-2 text-sm" >  สนามสอบ โรงเรียนโพธิ์ทอง"จินดามณี" อ.โพธิ์ทอง จ.อ่างทอง</div>
+    <div class=" text-center pt-2 text-sm" >  สนามสอบ โรงเรียนกุยบุรี"จินดามณี" อ.กุยบุรี จ.อ่างทอง</div>
     @foreach($student as $s)
       <div class=" text-center" > {{$s->ID}} {{$s->PRENAME}}{{$s->NAME}} {{$s->SURNAME}} </div>
     @endforeach
@@ -46,7 +46,7 @@
           <div class="font-semibold text-lg text-green-400 leading-tight text-center p-5">
             {{ __('"คุณมีสิทธิสอบ"') }} รายชื่อผู้มีสิทธิสอบในตาราง
           </div>
-          <div class=" text-center text-sm" >  สนามสอบ โรงเรียนโพธิ์ทอง"จินดามณี" อ.โพธิ์ทอง จ.อ่างทอง</div>
+          <div class=" text-center text-sm" >  สนามสอบ โรงเรียนกุยบุรี"จินดามณี" อ.กุยบุรี จ.อ่างทอง</div>
           <div class=" text-center text-sm" >  ประถม และ ม.ต้น สอบระบบปกติ</div>
           <div class=" text-center text-sm" >  ม.ปลาย สอบระบบคอมพิวเตอร์</div>
             <table class="w-full p-15 text-left text-xs md:text-sm font-light">

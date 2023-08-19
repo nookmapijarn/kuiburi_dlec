@@ -112,7 +112,7 @@ class StudentRegisController extends Controller
     public function get_gradelist(){
         // ตาราง garde
         $gradelist = DB::table('grade')
-        ->where('STD_CODE', '1215040001'.$this->getStudentidByUser())
+        ->where('STD_CODE', '1277020000'.$this->getStudentidByUser())
         ->get();
         return $gradelist;
     }
@@ -120,7 +120,7 @@ class StudentRegisController extends Controller
     public function get_current_regis($semestry){
         // ตาราง garde
         $list = DB::table('grade')
-        ->where('STD_CODE', '1215040001'.$this->getStudentidByUser())
+        ->where('STD_CODE', '1277020000'.$this->getStudentidByUser())
         ->where('SEMESTRY', $semestry)
         ->join('subject', 'grade.SUB_CODE', '=', 'subject.SUB_CODE')
         ->select('subject.SUB_CODE', 'subject.SUB_NAME', 'subject.SUB_CREDIT', 'subject.SUB_TYPE', 'grade.GRADE')

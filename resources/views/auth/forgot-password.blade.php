@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+        {{ __('คุณลืมรหัสผ่านใช่ไหม ? หากต้องการเปลี่ยนหรัสผ่านใหม่ กรุณากรอก E-mail ของคุณระบบจะส่งลิ้งสำหรับการเปลี่ยนรหัสผ่านใหม่ไปให้คุณ') }}
     </div>
 
     <!-- Session Status -->
@@ -12,7 +12,7 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus placeholder="กรุณาใส่ e-mail ที่ใช้สมัคร" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
