@@ -66,7 +66,7 @@ class TeachersController extends Controller
         $last = DB::table('grade')->select('SEMESTRY')->orderBy('SEMESTRY', 'DESC')->first();
         foreach($last as $l){
             $this->semestry = $last->SEMESTRY;
-            echo $this->semestry;
+            //echo $this->semestry;
         }
     }
 

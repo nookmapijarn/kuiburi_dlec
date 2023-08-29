@@ -23,9 +23,9 @@
                 <li>
                 <a href="#" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 ">ผู้บริหาร</a>
                 </li>
-                <li>
+                {{-- <li>
                 <a href="#" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 ">ศูนย์ช่วยเหลือ</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>

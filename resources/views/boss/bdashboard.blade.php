@@ -19,7 +19,7 @@
 
     {{-- Chart 2 --}}
     <div class="h-full p-8 bg-gray-100">
-      <h1>ร้อยละผู้เข้าสอบปลายภาค (รวมเทียบโอน)</h1>
+      <h1>ร้อยละผู้เข้าสอบปลายภาค</h1>
       <canvas id="myChart_C" height="100px"></canvas>
     </div> 
 
@@ -31,7 +31,7 @@
                 <dl>
                     <dt class="text-sm font-medium leading-5 text-gray-500 truncate flex flex-row content-center place-content-between">
                         <div>
-                            คาดว่าจะจบ <a href="{{ url('teachers') }}" class="underline text-indigo-400"> ดูรายตำบล </a>
+                            คาดว่าจะจบ (ล่าสุด) <a href="{{ url('teachers') }}" class="underline text-indigo-400"> ดูรายตำบล </a>
                         </div>  
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
@@ -60,7 +60,7 @@
                 </dl>
             </div>
           </div>
-          <div class="overflow-hidden bg-blue-100 rounded-lg shadow">
+          {{-- <div class="overflow-hidden bg-blue-100 rounded-lg shadow">
             <div class="px-4 py-5 lg:p-6">
                 <dl>
                     <dt class="text-sm font-medium leading-5 text-gray-500 truncate flex flex-row content-center place-content-between">
@@ -93,7 +93,7 @@
                     </dd>
                 </dl>
             </div>
-          </div>
+          </div> --}}
       </div>   
   </div>
 
@@ -162,12 +162,12 @@
   const data1 = {
     labels: labels,
     datasets: [
-      {
-        label: 'นักศึกษาใหม่ (ย้อนหลังไป 4 ภาคเรียน)',
-        backgroundColor: '#76D7C4',
-        borderColor: '#76D7C4',
-        data: data_new_student_rollback,
-      },
+      // {
+      //   label: 'นักศึกษาใหม่ (ย้อนหลังไป 4 ภาคเรียน)',
+      //   backgroundColor: '#76D7C4',
+      //   borderColor: '#76D7C4',
+      //   data: data_new_student_rollback,
+      // },
       {
         label: 'นักศึกษาจบหลักสูตร',
         backgroundColor: '#16A085',
@@ -200,22 +200,6 @@
 
     var labels =  {{ Js::from($labels) }};
     var data_exam_avg =  {{ Js::from($data_exam_avg) }};
-    var data_exam_avg_pangpub =  {{ Js::from($data_exam_avg_pangpub) }};
-    var data_exam_avg_angkaew =  {{ Js::from($data_exam_avg_angkaew) }};
-    var data_exam_avg_nongmeakai =  {{ Js::from($data_exam_avg_nongmeakai) }};
-    var data_exam_avg_yangchay =  {{ Js::from($data_exam_avg_yangchay) }};
-    var data_exam_avg_phorangnok =  {{ Js::from($data_exam_avg_phorangnok) }};
-    var data_exam_avg_rammasak =  {{ Js::from($data_exam_avg_rammasak) }};
-    var data_exam_avg_bangrakum =  {{ Js::from($data_exam_avg_bangrakum) }};
-    var data_exam_avg_borei =  {{ Js::from($data_exam_avg_borei) }};
-    var data_exam_avg_samngam =  {{ Js::from($data_exam_avg_samngam) }};
-    var data_exam_avg_thangpha =  {{ Js::from($data_exam_avg_thangpha) }};
-    var data_exam_avg_inthapamoon =  {{ Js::from($data_exam_avg_inthapamoon) }};
-    var data_exam_avg_aogkaruk =  {{ Js::from($data_exam_avg_aogkaruk) }};
-    var data_exam_avg_kokpudsar =  {{ Js::from($data_exam_avg_kokpudsar) }};
-    var data_exam_avg_bangjoacha =  {{ Js::from($data_exam_avg_bangjoacha) }};
-    var data_exam_avg_kumyard =  {{ Js::from($data_exam_avg_kumyard) }};
-    var data_exam_avg_pikan =  {{ Js::from($data_exam_avg_pikan) }};
 
   
     const data2 = {
@@ -226,102 +210,6 @@
           backgroundColor: '#E74C3C',
           borderColor: '#E74C3C',
           data: data_exam_avg,
-        },
-        {
-          label: 'บางพลับ',
-          backgroundColor: '#f6977a',
-          borderColor: '#f6977a',
-          data: data_exam_avg_pangpub,
-        },
-        {
-          label: 'อ่างแก้ว',
-          backgroundColor: '#ffc556',
-          borderColor: '#ffc556',
-          data: data_exam_avg_angkaew,
-        },
-        {
-          label: 'หนองแม่ไก่',
-          backgroundColor: '#66cdaa',
-          borderColor: '#66cdaa',
-          data: data_exam_avg_nongmeakai,
-        },
-        {
-          label: 'ยางช้าย',
-          backgroundColor: '#40e0d0',
-          borderColor: '#40e0d0',
-          data: data_exam_avg_yangchay,
-        },
-        {
-          label: 'โพธิ์รังนก',
-          backgroundColor: '#8a8cee',
-          borderColor: '#8a8cee',
-          data: data_exam_avg_phorangnok,
-        },
-        {
-          label: 'รำมะสัก',
-          backgroundColor: '#41a1e9',
-          borderColor: '#41a1e9',
-          data: data_exam_avg_rammasak,
-        },
-        {
-          label: 'บางระกำ',
-          backgroundColor: '#ffe599',
-          borderColor: '#ffe599',
-          data: data_exam_avg_bangrakum,
-        },
-        {
-          label: 'บ่อแร่',
-          backgroundColor: '#74b159',
-          borderColor: '#74b159',
-          data: data_exam_avg_borei,
-        },
-        {
-          label: 'สามง่าม',
-          backgroundColor: '#eb7ba7',
-          borderColor: '#eb7ba7',
-          data: data_exam_avg_samngam,
-        },
-        {
-          label: 'ทางพระ',
-          backgroundColor: '#fdda55',
-          borderColor: '#fdda55',
-          data: data_exam_avg_thangpha,
-        },
-        {
-          label: 'อินทประมูล',
-          backgroundColor: '#DFFF00',
-          borderColor: '##DFFF00',
-          data: data_exam_avg_inthapamoon,
-        },
-        {
-          label: 'องครักษ์',
-          backgroundColor: '#A569BD',
-          borderColor: '#A569BD',
-          data: data_exam_avg_aogkaruk,
-        },
-        {
-          label: 'โคกพุทรา',
-          backgroundColor: '#a4bcec',
-          borderColor: '#a4bcec',
-          data: data_exam_avg_kokpudsar,
-        },
-        {
-          label: 'บางเจ้าฉ่า',
-          backgroundColor: '#f3992f',
-          borderColor: '#f3992f',
-          data: data_exam_avg_bangjoacha,
-        },
-        {
-          label: 'คำหยาด',
-          backgroundColor: '#9fd813',
-          borderColor: '#9fd813',
-          data: data_exam_avg_kumyard,
-        },
-        {
-          label: 'พิการ',
-          backgroundColor: '#95A5A6',
-          borderColor: '#95A5A6',
-          data: data_exam_avg_pikan,
         }
       ]
     };
