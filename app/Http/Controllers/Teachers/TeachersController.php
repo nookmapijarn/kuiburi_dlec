@@ -204,7 +204,7 @@ class TeachersController extends Controller
 
     // ตารางไม่จบตกค้าง
     public function exp_unfin($student_id){
-        $expfin = DB::table('expectfin1')->where('ID', $student_id)->first();
+        $expfin = DB::table('nofinish')->where('ID', $student_id)->first();
         if($expfin === null){
             return false;
         } else {

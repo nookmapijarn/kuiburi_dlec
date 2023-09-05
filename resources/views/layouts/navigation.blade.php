@@ -53,6 +53,9 @@
                     <x-nav-link :href="route('ตารางสอบ')" :active="request()->routeIs('ตารางสอบ')" class="text-white">
                         {{ __('ตารางสอบ') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('กพช')" :active="request()->routeIs('กพช')" class="text-white">
+                        {{ __('กพช') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -116,6 +119,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('ตารางสอบ')" :active="request()->routeIs('ตารางสอบ')" class="{{request()->routeIs('ตารางสอบ') ? 'text-indigo-800' : 'text-white'}}">
                 {{ __('ตารางสอบ') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('กพช')" :active="request()->routeIs('กพช')" class="{{request()->routeIs('กพช') ? 'text-indigo-800' : 'text-white'}}">
+                {{ __('กพช') }}
             </x-responsive-nav-link>
         </div>
 

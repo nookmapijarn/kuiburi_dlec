@@ -98,7 +98,7 @@
                     @elseif($d['nt_sem']=="E-Exam")
                     <td class="p-2 text-center text-yellow-500">{{$d['nt_sem']}}</td>
                     @else
-                    <td class="p-2 text-center">{{$d['nt_sem']}}</td>
+                    <td class="p-2 text-center">{{$d['nt_sem']}} 55</td>
                     @endif
                   </tr>
                 @endforeach

@@ -7,6 +7,7 @@ use App\Http\Controllers\Students\DashboardController;
 use App\Http\Controllers\Students\ExamscheduleController;
 use App\Http\Controllers\Students\FinalController;
 use App\Http\Controllers\Students\StudentRegisController;
+use App\Http\Controllers\Students\ActivityController;
 
 // Teacher
 use App\Http\Controllers\Teachers\TeachersController;
@@ -86,6 +87,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/ตารางสอบ', [ExamscheduleController::class, 'index'])->name('ตารางสอบ');
     Route::get('/การจบหลักสูตร', [FinalController::class, 'index'])->name('การจบหลักสูตร');
     Route::get('/ประวัติการลงทะเบียน', [StudentRegisController::class, 'index'])->name('ประวัติการลงทะเบียน');
+    Route::get('/กพช', [ActivityController::class, 'index'])->name('กพช');
 });
 
 Route::middleware('auth')->group(function () {
