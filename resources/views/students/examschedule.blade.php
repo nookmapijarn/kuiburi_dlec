@@ -18,7 +18,7 @@
                     <th scope="col" class="p-2">รายวิชา</th>
                     <th scope="col" class="p-2">วัน</th>
                     <th scope="col" class="p-2">เวลา</th>
-                    <th scope="col" class="p-2 text-center">ห้อง</th>
+                    {{-- <th scope="col" class="p-2 text-center">ห้อง</th> --}}
                   </tr>
                 </thead>
                 <tbody class="text-xs md:text-sm">
@@ -29,7 +29,7 @@
                     <td class="p-2 text-ellipsis overflow-hidden">{{$s['sub_name']}}</td>
                     <td class="p-2 w-15">@if($s['exam_day']!=0)  {{$s['exam_day']}} @endif</td>
                     <td class="p-2">@if($s['exam_start']!=0) {{$s['exam_start']}}-{{$s['exam_end']}} น. @endif</td>
-                    <td class="p-2 text-center">{{$s['exam_room']}}</td>
+                    {{-- <td class="p-2 text-center">{{$s['exam_room']}}</td> --}}
                   </tr>
                 @endforeach
                 </tbody>
